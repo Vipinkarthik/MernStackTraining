@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app-container {
+    @apply bg-gradient-to-r from-indigo-600 to-pink-600 min-h-screen flex justify-center items-center p-6;
+  }
+
+  .box {
+    @apply max-w-md p-8 bg-white rounded-xl shadow-xl text-center w-full sm:w-96;
+  }
+
+  .timer {
+    @apply text-4xl font-extrabold text-gray-800 mt-6;
+  }
+
+  .timer-timeup {
+    @apply text-4xl font-extrabold text-red-600 mt-4;
+  }
+
+  .timer-message {
+    @apply text-lg text-gray-600 mt-4;
+  }
+
+  .flex-buttons {
+    @apply mt-8 flex justify-between space-x-4;
+  }
+
+  .flex-buttons button {
+    @apply py-3 px-6 rounded-lg text-white font-semibold shadow-md transition-transform duration-300;
+  }
+
+  .flex-buttons button:hover {
+    @apply transform scale-110 shadow-lg;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 500px) {
+    .box {
+      @apply p-6 max-w-full;
+    }
+
+    .timer {
+      @apply text-2xl;
+    }
+
+    .timer-timeup {
+      @apply text-2xl;
+    }
+
+    .flex-buttons {
+      @apply flex-col space-y-4;
+    }
+
+    .flex-buttons button {
+      @apply w-full; /* Full width buttons on smaller screens */
+    }
+  }
+
+  /* Disabled Button Styling */
+  .flex-buttons button:disabled {
+    @apply bg-gray-400 cursor-not-allowed opacity-50;
+  }
+
+  /* Enhanced Button Color Palette */
+  .flex-buttons button:first-child {
+    @apply bg-blue-500 hover:bg-blue-600;
+  }
+
+  .flex-buttons button:nth-child(2) {
+    @apply bg-green-500 hover:bg-green-600;
+  }
+
+  .flex-buttons button:nth-child(3) {
+    @apply bg-red-500 hover:bg-red-600;
+  }
+
+  .flex-buttons button:last-child {
+    @apply bg-yellow-500 hover:bg-yellow-600;
+  }
+
+  /* Timer text styles for better clarity */
+  .timer-timeup {
+    @apply text-4xl font-extrabold text-red-600 mt-6;
+  }
+}
