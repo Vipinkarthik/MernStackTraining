@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the Weather App */
+#root {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Body background with a nice gradient */
+body {
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* Center the container vertically and horizontally */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Weather Card Styling */
+.bg-white {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.text-indigo-700 {
+  color: #3b82f6;
+}
+
+/* Styling for the input field */
+input[type="text"] {
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid #e5e7eb;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Loading and error message styling */
+.text-center {
+  text-align: center;
+}
+
+.text-indigo-600 {
+  color: #2563eb;
+}
+
+.text-red-600 {
+  color: #dc2626;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+/* Weather Data */
+.weather-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.weather-temp {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3b82f6; /* Blue color for temp */
+}
+
+.weather-card {
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .bg-white {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  button {
+    padding: 0.75rem;
+  }
+}
+

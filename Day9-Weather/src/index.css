@@ -1,0 +1,115 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Custom colors */
+  --primary-color: #3b82f6; /* Blue color for buttons and links */
+  --button-bg-color: #1a1a1a; /* Dark background for buttons */
+  --hover-color: #535bf2; /* Lighter blue for hover effect */
+  --light-bg-color: #ffffff; /* Light background for light mode */
+  --light-text-color: #213547; /* Darker text for light mode */
+  --hover-button-bg-color: #646cff; /* Lighter color on button hover */
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--hover-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-bg-color);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: var(--hover-button-bg-color);
+  border-color: var(--hover-color);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--light-text-color);
+    background-color: var(--light-bg-color);
+  }
+
+  body {
+    background-color: var(--light-bg-color);
+  }
+
+  h1 {
+    color: var(--light-text-color);
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+    border: 1px solid #e5e7eb;
+    color: #333;
+  }
+
+  button:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 0.6em 1.2em;
+  }
+}
